@@ -6,7 +6,7 @@ public landing and authenticated student dashboard for the StudyBuddy RU startup
 ## Quick start
 
 ```bash
-git clone https://github.com/NickAzula/studdybuddy-ai.git && cd studybuddy-ui
+git clone https://github.com/NickAzula/studdybuddy-ai.git && cd studybuddy-ai
 npm install
 npm run dev
 ```
