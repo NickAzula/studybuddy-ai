@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
@@ -5,12 +7,23 @@ import Link from "next/link";
 export default function LandingPage() {
   return (
     <main className="flex flex-col items-center px-4">
-      <section className="flex flex-col items-center text-center max-w-3xl pt-24 pb-16">
+      <header className="w-full flex justify-between items-center py-4 px-6">
+        <div className="font-bold text-xl">StudyBuddy RU</div>
+        <div className="flex gap-4">
+          <Link href="/login">
+            <Button variant="outline">Войти</Button>
+          </Link>
+          <Link href="/signup">
+            <Button>Регистрация</Button>
+          </Link>
+        </div>
+      </header>
+      <section className="flex flex-col items-center text-center max-w-3xl pt-16 pb-16">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
           Репетитор‑ИИ, который повышает баллы по&nbsp;ЕГЭ
         </h1>
         <p className="text-lg md:text-xl mb-8 text-muted-foreground">
-          Фото задачи → пошаговое объяснение за&nbsp;30 секунд. Попробуй бесплатно прямо сейчас.
+          Фото задачи → пошаговое объяснение за&nbsp;30 секунд. Попробуй бесплатно прямо сейчас.
         </p>
         <div className="flex gap-4">
           <Link href="/signup">
@@ -49,7 +62,7 @@ export default function LandingPage() {
           <Card className="border-primary">
             <CardContent className="p-8 flex flex-col items-center gap-4">
               <h3 className="text-2xl font-semibold">Free</h3>
-              <p className="text-muted-foreground">100 вопросов / месяц</p>
+              <p className="text-muted-foreground">100 вопросов / месяц</p>
               <span className="text-4xl font-bold">₽0</span>
               <Link href="/signup">
                 <Button size="lg">Начать</Button>
@@ -62,14 +75,14 @@ export default function LandingPage() {
               <p className="text-muted-foreground">Неограниченные вопросы, голос‑чат, экзамен‑симулятор</p>
               <span className="text-4xl font-bold">₽499/мес</span>
               <Link href="/signup?plan=premium">
-                <Button size="lg">Попробовать 7 дней</Button>
+                <Button size="lg">Попробовать 7 дней</Button>
               </Link>
             </CardContent>
           </Card>
         </div>
       </section>
       <footer className="w-full border-t py-8 text-sm text-muted-foreground flex flex-col items-center gap-2">
-        <p>© 2025 StudyBuddy RU</p>
+        <p>© 2025 StudyBuddy RU</p>
         <Link href="/privacy" className="underline">Политика конфиденциальности</Link>
       </footer>
     </main>

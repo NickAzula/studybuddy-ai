@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -11,7 +13,7 @@ export default function Dashboard() {
             <p className="text-sm text-muted-foreground">Текущий прогноз</p>
             <p className="text-4xl font-bold">62/100</p>
           </div>
-          <Link href="/app/exam">
+          <Link href="/exam">
             <Button size="lg">Сдать пробный экзамен</Button>
           </Link>
         </CardContent>
@@ -26,7 +28,7 @@ export default function Dashboard() {
               </span>
             ))}
           </div>
-          <Link href="/app/training">
+          <Link href="/training">
             <Button size="lg" className="mt-4 self-start">
               Начать 12‑мин сессию
             </Button>
